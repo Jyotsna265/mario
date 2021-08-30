@@ -1,5 +1,10 @@
 function preload() {
 	world_start = loadSound("world_start.wav");
+	mario_jump = loadSound("jump.wav");
+	mario_coin = loadSound("coin.wav");
+	mario_gameover = loadSound("gameover.wav");
+	mario_kick = ("kick.wav");
+	mario_die =  loadSound("mariodie.wav");
 	setSprites();
 	MarioAnimation();
 }
@@ -33,17 +38,3 @@ function gotPoses(results) {
 	}
 }
 
-noseX = "";
-noseY = "";
-GameStatus = "";
-
-function startGame() {
-	GameStatus = "start";
-	document.getElementById("status").innerHTML = "Game Is Loading";
-}
-
-	function game() {
-		instializeInDraw();
-		moveEnvironment(mario);
-		drawSprites();
-	}
